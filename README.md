@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# PawFinder-BE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This project is the third milestone project for the NCSU software development program. The Pawfinder project was created by Vincent, Casey, Finnegan and Mayna.
 
-## Available Scripts
+### This is the BackEnd of the application.
 
-In the project directory, you can run:
+### This is a full stack application which allows users of PawFinder to create new pet adoption profiles for both cats and dogs, read the adoption listings, update the adoption listings, and delete them. It also allows users to explore the website with a navbar, view our current Foster Pawrents and view an About page with PawFinder's Mission. Lastly, if users wish to be considered in the placement of the pet, there is an adoption submission form that users can be submit. 
 
-### `npm start`
+---
+### To install:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Clone from the repo and install npm will install require dependencies:
+```npm install```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
+### To run the backend:
 
-### `npm test`
+* Note Node.js must be installed for application to run [Node JS](https://nodejs.org/en/download/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+From the root directory run:
+``` npm run dev ```
 
-### `npm run build`
+This will execute the script and output the following: 
+```
+> Pawfinder@1.0.0 dev
+> npx nodemon index.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`  
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node index.js`
+listening on port 8080
+DB connected
+  ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
+### To run the frontend: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Note Node.js must be installed for application to run [Node JS](https://nodejs.org/en/download/)
 
-### `npm run eject`
+From the root directory run:
+``` npm start ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will execute the script and output the following: 
+```
+Compiled successfully!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can now view pet-adoption-safe-haven-frontend in the browser.  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  Local:            http://localhost:3000        
+  On Your Network:  http://192.168.1.12:3000     
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Note that the development build is not optimized.
+To create a production build, use npm run build. 
 
-## Learn More
+webpack compiled successfully
+  ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
+### Project Design Goals:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Create the PetFinder Home/landing page where a user may choose to browse available Pets to adopt
+* Create the create new pet page to add a new dog or cat that's available to adopt
+* Create a read page for EACH dog and cat that's available to adopt
+* Create an update function to update existing adoption listings and adoptee status
+* Create a delete function to remove cats and dogs that have been adopted or added in error 
+* Create an Adoption Submission Form for users to submit to Pawfinder if they are interested in adoption
+* Create an About Pawfinder page including the PawFinder mission statement
+* Style pages to have consistent format that is visually appealing
+* Application Deployment
