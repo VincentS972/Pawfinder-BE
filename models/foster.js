@@ -1,3 +1,4 @@
+const mongoose = require('mongoose')
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const bcrypt = require('bcryptjs');

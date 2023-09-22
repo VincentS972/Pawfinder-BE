@@ -1,5 +1,5 @@
-const express = require('express')
 const mongoose = require('mongoose')
+const express = require('express')
 const cors = require('cors')
 require('dotenv').config()
 
@@ -21,7 +21,7 @@ app.use('/foster', fosterRoutes)
 const PORT = process.env.PORT || 8080
 
 
-// db connection
+db connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('DB connected'))
     .catch(err => console.error(err));
