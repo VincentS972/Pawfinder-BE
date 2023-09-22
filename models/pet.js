@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const petsSchema = new mongoose.Schema({
-    petsName: {
+const petSchema = new mongoose.Schema({
+    petName: {
         type: String,
         required: true,
     },
-    fostersName: {
+    fosterName: {
         type: String,
         required: true
     },
@@ -21,4 +21,4 @@ const petsSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('pets', petsSchema);
+module.exports = mongoose.model('pet', petSchema);

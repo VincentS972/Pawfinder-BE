@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
 
-const petsRoutes = require('./routes/pets')
-const fostersRoutes = require('./routes/fosters')
+const petRoutes = require('./routes/pet')
+const fosterRoutes = require('./routes/foster')
 //add routs here
 const app = express()
 
@@ -14,8 +14,8 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 //routes
-app.use('/pets', petsRoutes)
-app.use('/fosters', fostersRoutes)
+app.use('/pet', petRoutes)
+app.use('/foster', fosterRoutes)
 
 
 const PORT = process.env.PORT || 8080
