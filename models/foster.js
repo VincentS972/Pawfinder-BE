@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const bcrypt = require('bcryptjs');
-const fostersSchema = new mongoose.Schema({
+const fosterSchema = new mongoose.Schema({
     userName: {
         type: String,
         required: true,
@@ -31,7 +31,7 @@ const fostersSchema = new mongoose.Schema({
 }, {
     timestamps: true
 });
-fostersSchema.pre("save", function (next) {
+fosterSchema.pre("save", function (next) {
     const user = this;
     if (this.isModified("password") || this.isNew) {
         bcrypt.genSalt(10, function (saltError, salt) {
@@ -53,7 +53,7 @@ fostersSchema.pre("save", function (next) {
         return next();
     }
 });
-fostersSchema.methods.comparePassword = function (password, callback) {
+fosterSchema.methods.comparePassword = function (password, callback) {
     bcrypt.compare(password, this.password, function (error, isMatch) {
         if (error) {
             return callback(error);
@@ -63,4 +63,4 @@ fostersSchema.methods.comparePassword = function (password, callback) {
         }
     });
 };
-module.exports = mongoose.model('fosters', fostersSchema);
+module.exports = mongoose.model('foster', fosterSchema);
