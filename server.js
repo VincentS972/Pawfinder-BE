@@ -21,7 +21,7 @@ app.use('/foster', fosterRoutes)
 const PORT = process.env.PORT || 8080
 
 
-db connection
+// db connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('DB connected'))
     .catch(err => console.error(err));
