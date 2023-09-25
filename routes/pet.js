@@ -20,3 +20,4 @@ router.put('/:id', updatePetById)
 router.delete('/:id', deletePetById)
 
 module.exports = router
+

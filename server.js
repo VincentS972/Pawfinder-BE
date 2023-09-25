@@ -6,7 +6,8 @@ require('dotenv').config()
 const petRoutes = require('./routes/pet')
 const fosterRoutes = require('./routes/foster')
 const Pets = require("./models/pet")
-//add routs here
+
+//add routes here
 const app = express()
 
 //middlewares
@@ -27,17 +28,28 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 app.listen(PORT, console.log(`listining on port ${PORT}`))
 
-const seedData = [
-  {
-    petName: "Whiskers",
-    fosterName: "Shawn",
-    getsUpdates: true
-  }
+const petSeedData = [
+    {
+        petName: "Whiskers",
+        fosterName: "Shawn",
+        petGender: "Female",
+        petType: "Cat",
+        petAge: "2 Years",
+        petBio: "Whiskers is an orange independent Domestic Shorthair, who will capture your heart with her graceful charm and soothing purrs."
+    },
+    {
+        petName: "Luna",
+        fosterName: "Ilana",
+        petGender: "Female",
+        petType: "Dog",
+        petAge: "3 Years",
+        petBio: "Luna is a spirited, intelligent Border Collie mix with a heart full of love and a zest for life."
+    }
 ];
 
 const seedDB = async () => {
   await Pets.deleteMany({});
-  await Pets.insertMany(seedData);
+  await Pets.insertMany(petSeedData);
 };
 
 seedDB().then(() => {
