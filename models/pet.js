@@ -1,6 +1,7 @@
+
 const mongoose = require('mongoose')
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+// "use strict";
+// Object.defineProperty(exports, "__esModule", { value: true });
 const petSchema = new mongoose.Schema({
     profilePicture: {
         type: String,
@@ -37,4 +38,4 @@ const petSchema = new mongoose.Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('pet', petSchema);
+module.exports = mongoose.model('Pet', petSchema);

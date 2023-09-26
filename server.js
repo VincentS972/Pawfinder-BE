@@ -1,12 +1,13 @@
+
 const mongoose = require('mongoose')
 const express = require('express')
 const cors = require('cors')
 require('dotenv').config()
 
-const petRoutes = require('./routes/pet')
+const petRoutes = require('./controllers/pet')
 const fosterRoutes = require('./routes/foster')
-const Pets = require("./models/pet")
-//add routs here
+
+//add routes here
 const app = express()
 
 //middlewares
@@ -15,7 +16,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 //routes
-app.use('/pet', petRoutes)
+app.use('/pets', petRoutes)
 app.use('/foster', fosterRoutes)
 
 // db connection and seed data
@@ -25,23 +26,4 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
     .then(() => console.log('DB connected'))
     .catch(err => console.error(err));
 
-app.listen(PORT, console.log(`listining on port ${PORT}`))
-
-const seedData = [
-  {
-    petName: "Whiskers",
-    fosterName: "Shawn",
-    getsUpdates: true
-  }
-];
-
-const seedDB = async () => {
-  await Pets.deleteMany({});
-  await Pets.insertMany(seedData);
-};
-
-seedDB().then(() => {
-  mongoose.connection.close();
-})
-
-module.exports = app;
+app.listen(PORT, console.log(`listening on port ${PORT}`))
