@@ -1,4 +1,4 @@
-const Foster = require('../models/Foster')
+const Foster = require('../models/foster')
 
 async function getAllFosters(req, res) {
     try {
