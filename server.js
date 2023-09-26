@@ -4,8 +4,8 @@ const express = require('express')
 const cors = require('cors')
 require('dotenv').config()
 
-const petRoutes = require('./controllers/pet')
-const fosterRoutes = require('./routes/foster')
+const petRoutes = require('./controllers/Pet')
+const fosterRoutes = require('./controllers/Foster')
 
 //add routes here
 const app = express()

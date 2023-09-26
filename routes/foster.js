@@ -1,22 +1,22 @@
-const router = require('express').Router()
-const {
-    getAllFosters,
-    createFoster,
-    deleteFosterById,
-    updateFosterById,
-    getFosterById
+// const router = require('express').Router()
+// const {
+//     getAllFosters,
+//     createFoster,
+//     deleteFosterById,
+//     updateFosterById,
+//     getFosterById
    
-} = require ('../controllers/foster')
+// } = require ('../controllers/foster')
 
 
-router.get('/', getAllFosters)
+// router.get('/', getAllFosters)
 
-router.get('/:id', getFosterById)
+// router.get('/:id', getFosterById)
 
-router.post('/', createFoster)
+// router.post('/', createFoster)
 
-router.put('/:id', updateFosterById)
+// router.put('/:id', updateFosterById)
  
-router.delete('/:id', deleteFosterById)
+// router.delete('/:id', deleteFosterById)
 
-module.exports = router
+// module.exports = router
