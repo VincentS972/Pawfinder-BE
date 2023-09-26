@@ -6,7 +6,7 @@ const {
     updateFosterById,
     getFosterById
    
-} = require ('../controllers/Foster')
+} = require ('../controllers/foster')
 
 
 router.get('/', getAllFosters)
