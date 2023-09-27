@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose')
-// "use strict";
-// Object.defineProperty(exports, "__esModule", { value: true });
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const petSchema = new mongoose.Schema({
     profilePicture: {
         type: String,
