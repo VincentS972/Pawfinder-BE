@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const bcrypt = require('bcryptjs');
 const fosterSchema = new mongoose.Schema({
     userName: {
         type: String,

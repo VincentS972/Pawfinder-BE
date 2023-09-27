@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Pet = require("../models/Pet");
+const Pet = require("../models/pet");
 
 // routes
 
@@ -103,7 +103,7 @@ router.get('/data/seed', async function (req, res) {
   ];
 
   await Pet.insertMany(data);
-  res.status(303).redirect('/pets');
+  res.status(303).redirect('/pet');
 });
 
 module.exports = router;
